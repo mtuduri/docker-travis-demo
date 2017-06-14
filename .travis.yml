@@ -1,0 +1,11 @@
+sudo: required
+dist: trusty
+
+services:
+  - docker
+
+script:
+  - docker pull mtuduri/riga:1.0
+  - docker run -d mtuduri/riga:1.0
+  - docker ps
+  - echo "Image built and running"
